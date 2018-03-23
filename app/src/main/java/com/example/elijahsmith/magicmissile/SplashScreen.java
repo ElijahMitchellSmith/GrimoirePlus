@@ -20,7 +20,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         imageView = findViewById(R.id.imageView);
-        imageView.startAnimation(myAnimation);
         new Timer().schedule(new TimerTask(){
             public void run() {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));

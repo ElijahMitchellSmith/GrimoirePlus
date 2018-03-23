@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Magic Missle! Your Dundgoens and Dragons Compendium"
+        android:text="@string/welcome"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
         android:textSize="18sp"
