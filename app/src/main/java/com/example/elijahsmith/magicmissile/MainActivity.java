@@ -104,8 +104,4 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    @OnClick(R.id.fab)
-    protected void emailUs() {
-        
-    }
 }
