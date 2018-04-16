@@ -20,12 +20,13 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ButterKnife.bind(this);
         super.onCreate(savedInstanceState);
-        Intent splashScreen = new Intent();
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        Intent splashscreen = new Intent();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    @OnClick
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
