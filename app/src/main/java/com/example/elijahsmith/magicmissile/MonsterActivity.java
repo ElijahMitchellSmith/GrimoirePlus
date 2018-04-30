@@ -10,6 +10,7 @@ import butterknife.ButterKnife;
 
 public class MonsterActivity extends Activity {
     private MonsterAdapter monsterAdapter;
+    private RecyclerView monsterRecyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +23,8 @@ public class MonsterActivity extends Activity {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
 
-        monsterAdapter = new MonsterAdapter(videoGameDatabase.videoGameDao().getGames(), this);
-        gameRecyclerView.setLayoutManager(linearLayoutManager);
-        gameRecyclerView.setAdapter(videoGameAdapter);
-        videoGameAdapter.notifyDataSetChanged();
+        monsterRecyclerView.setLayoutManager(linearLayoutManager);
+        monsterRecyclerView.setAdapter(monsterAdapter);
+        monsterAdapter.notifyDataSetChanged();
     }
 }
