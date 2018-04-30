@@ -16,4 +16,13 @@ public class MonsterActivity extends Activity {
         ButterKnife.bind(this);
 
     }
+
+    private void setUpRecyclerView() {
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+
+        videoGameAdapter = new VideoGameAdapter(videoGameDatabase.videoGameDao().getGames(), this);
+        gameRecyclerView.setLayoutManager(linearLayoutManager);
+        gameRecyclerView.setAdapter(videoGameAdapter);
+        videoGameAdapter.notifyDataSetChanged();
 }
